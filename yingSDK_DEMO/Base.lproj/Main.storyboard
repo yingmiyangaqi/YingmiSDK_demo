@@ -51,35 +51,69 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY1-Kw-pu1">
-                                <rect key="frame" x="285" y="184" width="30" height="30"/>
+                                <rect key="frame" x="181" y="184" width="30" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="login:" destination="gob-be-vEt" eventType="touchUpInside" id="EQ1-mx-W82"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-IM-wkt">
+                                <rect key="frame" x="50" y="229" width="500" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vA3-Fx-1LF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vA3-Fx-1LF"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4k2-QM-pFb">
+                                <rect key="frame" x="251" y="184" width="99" height="30"/>
+                                <state key="normal" title="获取盈米token"/>
+                                <connections>
+                                    <action selector="token:" destination="gob-be-vEt" eventType="touchUpInside" id="M2d-K8-1Se"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YV0-44-En7" firstAttribute="top" secondItem="MBq-qM-BQg" secondAttribute="bottom" constant="15" id="7Yv-JH-ItH"/>
+                            <constraint firstItem="4k2-QM-pFb" firstAttribute="centerX" secondItem="rN4-Mk-utN" secondAttribute="centerX" id="9bw-gY-SPp"/>
+                            <constraint firstItem="4k2-QM-pFb" firstAttribute="top" secondItem="YV0-44-En7" secondAttribute="bottom" constant="15" id="9w9-aG-k9K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MBq-qM-BQg" secondAttribute="trailing" constant="30" id="MeQ-FL-Dag"/>
                             <constraint firstItem="YV0-44-En7" firstAttribute="leading" secondItem="MBq-qM-BQg" secondAttribute="leading" id="Mys-5t-fc1"/>
+                            <constraint firstItem="4k2-QM-pFb" firstAttribute="leading" secondItem="fY1-Kw-pu1" secondAttribute="trailing" constant="40" id="NPj-zB-6NH"/>
+                            <constraint firstItem="MPT-IM-wkt" firstAttribute="top" secondItem="4k2-QM-pFb" secondAttribute="bottom" constant="15" id="Njo-5h-16E"/>
+                            <constraint firstItem="4k2-QM-pFb" firstAttribute="centerX" secondItem="rN4-Mk-utN" secondAttribute="centerX" constant="50" id="Of1-lr-rq6"/>
                             <constraint firstItem="fY1-Kw-pu1" firstAttribute="top" secondItem="YV0-44-En7" secondAttribute="bottom" constant="15" id="PVh-nz-93c"/>
+                            <constraint firstItem="MPT-IM-wkt" firstAttribute="trailing" secondItem="YV0-44-En7" secondAttribute="trailing" id="Pbl-tS-4NX"/>
+                            <constraint firstItem="MPT-IM-wkt" firstAttribute="top" secondItem="4k2-QM-pFb" secondAttribute="bottom" constant="15" id="SFJ-9y-cMT"/>
+                            <constraint firstItem="4k2-QM-pFb" firstAttribute="top" secondItem="YV0-44-En7" secondAttribute="bottom" constant="15" id="VYw-WQ-OHP"/>
                             <constraint firstItem="MBq-qM-BQg" firstAttribute="leading" secondItem="rN4-Mk-utN" secondAttribute="leadingMargin" constant="30" id="XGD-cj-9SU"/>
                             <constraint firstItem="MBq-qM-BQg" firstAttribute="top" secondItem="eNE-hL-dSU" secondAttribute="bottom" constant="30" id="aed-CY-L2G"/>
                             <constraint firstItem="fY1-Kw-pu1" firstAttribute="top" secondItem="YV0-44-En7" secondAttribute="bottom" constant="15" id="bLA-bF-ury"/>
-                            <constraint firstItem="fY1-Kw-pu1" firstAttribute="centerX" secondItem="rN4-Mk-utN" secondAttribute="centerX" id="bkg-29-Has"/>
+                            <constraint firstItem="MPT-IM-wkt" firstAttribute="leading" secondItem="YV0-44-En7" secondAttribute="leading" id="r3W-l4-AR1"/>
                             <constraint firstItem="YV0-44-En7" firstAttribute="trailing" secondItem="MBq-qM-BQg" secondAttribute="trailing" id="tNz-Tt-6Sy"/>
                             <constraint firstItem="fY1-Kw-pu1" firstAttribute="centerX" secondItem="rN4-Mk-utN" secondAttribute="centerX" constant="-50" id="xyf-yL-esi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="SFJ-9y-cMT"/>
                                 <exclude reference="bLA-bF-ury"/>
                                 <exclude reference="xyf-yL-esi"/>
+                                <exclude reference="9w9-aG-k9K"/>
+                                <exclude reference="Of1-lr-rq6"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="登录" id="cex-4a-IGm"/>
                     <connections>
+                        <outlet property="btnToken" destination="4k2-QM-pFb" id="7g7-Go-Vpy"/>
+                        <outlet property="lb_token" destination="MPT-IM-wkt" id="kak-sg-oR9"/>
                         <outlet property="txt_accountId" destination="MBq-qM-BQg" id="Cmb-aV-IBL"/>
                         <outlet property="txt_password" destination="YV0-44-En7" id="WNM-Th-icx"/>
                     </connections>
