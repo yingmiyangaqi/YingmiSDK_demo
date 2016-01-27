@@ -78,8 +78,6 @@
     return cell;
 }
 
-- (IBAction)risk:(id)sender {
-}
 
 - (IBAction)allot:(id)sender {
     UITableViewCell * cell = (UITableViewCell *)[[sender superview] superview];
@@ -105,12 +103,18 @@
 }
 
 - (IBAction)rechargeWallet:(id)sender {
-
+    [YingmiSDK callWithUI:@"rechargeWallet" params:nil options:nil completeBlock:^(id err, id data) {
+        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
+        NSLog(@"%@",msg);
+    }];
 }
 
 
 - (IBAction)redeemWallet:(id)sender {
-
+    [YingmiSDK callWithUI:@"redeemWallet" params:nil options:nil completeBlock:^(id err, id data) {
+        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
+        NSLog(@"%@",msg);
+    }];
 }
 
 @end
