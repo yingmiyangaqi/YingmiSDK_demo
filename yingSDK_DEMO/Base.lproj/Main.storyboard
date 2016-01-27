@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -272,16 +273,116 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="购买" id="uBz-yl-Pmn">
-                        <barButtonItem key="rightBarButtonItem" title="风险评测" id="bN4-RR-hJN">
-                            <connections>
-                                <action selector="risk:" destination="96y-i4-Vvu" id="MH8-Yc-xGW"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="持仓" id="gDn-1B-haA">
+                                <connections>
+                                    <segue destination="oFU-7I-QO0" kind="push" id="phT-Xn-SiF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="风险评测" id="bN4-RR-hJN">
+                                <connections>
+                                    <action selector="risk:" destination="96y-i4-Vvu" id="MH8-Yc-xGW"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHj-Uo-3ZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1310" y="571"/>
+        </scene>
+        <!--持仓-->
+        <scene sceneID="rlL-sU-aT3">
+            <objects>
+                <tableViewController id="oFU-7I-QO0" customClass="YMHoldTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8m5-tm-4LN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="holdIdentifier" id="QnM-zc-PG9">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QnM-zc-PG9" id="hJX-9D-1v5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="23" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aKW-h9-4yT">
+                                            <rect key="frame" x="8" y="11" width="80" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="ci3-cq-cCa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="24" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-o5-gWH">
+                                            <rect key="frame" x="98" y="11" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="qV7-R5-e3h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-OD-f3l">
+                                            <rect key="frame" x="546" y="7" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="OUZ-Xq-MxN"/>
+                                            </constraints>
+                                            <state key="normal" title="转换"/>
+                                            <connections>
+                                                <action selector="convert:" destination="oFU-7I-QO0" eventType="touchUpInside" id="Xnq-6G-Q8d"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21f-ja-9Ev">
+                                            <rect key="frame" x="498" y="7" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="M5X-Rj-fpi"/>
+                                            </constraints>
+                                            <state key="normal" title="赎回"/>
+                                            <connections>
+                                                <action selector="redeem:" destination="oFU-7I-QO0" eventType="touchUpInside" id="8ov-aP-uBR"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzv-Ha-CAx">
+                                            <rect key="frame" x="436" y="7" width="60" height="30"/>
+                                            <state key="normal" title="修改分红"/>
+                                            <connections>
+                                                <action selector="change:" destination="oFU-7I-QO0" eventType="touchUpInside" id="Dei-Lx-w6x"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Fq1-OD-f3l" secondAttribute="trailing" id="0co-d6-EzM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aKW-h9-4yT" secondAttribute="bottom" constant="3.5" id="2yn-Xo-cX1"/>
+                                        <constraint firstItem="Hzv-Ha-CAx" firstAttribute="top" secondItem="hJX-9D-1v5" secondAttribute="topMargin" constant="-1" id="AD3-qG-R4r"/>
+                                        <constraint firstItem="aKW-h9-4yT" firstAttribute="top" secondItem="hJX-9D-1v5" secondAttribute="topMargin" constant="3" id="DD8-UO-6yZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Fq1-OD-f3l" secondAttribute="bottom" constant="-1.5" id="EzH-b7-9Wd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Hzv-Ha-CAx" secondAttribute="bottom" constant="-1.5" id="IrU-ml-nFa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="21f-ja-9Ev" secondAttribute="bottom" constant="-1.5" id="KGG-sY-Ryr"/>
+                                        <constraint firstItem="aKW-h9-4yT" firstAttribute="leading" secondItem="hJX-9D-1v5" secondAttribute="leadingMargin" id="LRI-sT-pU3"/>
+                                        <constraint firstItem="Mt4-o5-gWH" firstAttribute="leading" secondItem="aKW-h9-4yT" secondAttribute="trailing" constant="10" id="Pa8-Yp-o5U"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Mt4-o5-gWH" secondAttribute="bottom" constant="3.5" id="dHP-Uv-0Qx"/>
+                                        <constraint firstItem="21f-ja-9Ev" firstAttribute="leading" secondItem="Hzv-Ha-CAx" secondAttribute="trailing" constant="2" id="fKt-2d-CIh"/>
+                                        <constraint firstItem="21f-ja-9Ev" firstAttribute="top" secondItem="hJX-9D-1v5" secondAttribute="topMargin" constant="-1" id="fUs-SE-W8C"/>
+                                        <constraint firstItem="Mt4-o5-gWH" firstAttribute="top" secondItem="hJX-9D-1v5" secondAttribute="topMargin" constant="3" id="g6o-Jr-veA"/>
+                                        <constraint firstItem="Fq1-OD-f3l" firstAttribute="leading" secondItem="21f-ja-9Ev" secondAttribute="trailing" constant="2" id="m8h-uh-Nvx"/>
+                                        <constraint firstItem="Fq1-OD-f3l" firstAttribute="top" secondItem="hJX-9D-1v5" secondAttribute="topMargin" constant="-1" id="v1A-fH-Ots"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oFU-7I-QO0" id="X5R-93-4GQ"/>
+                            <outlet property="delegate" destination="oFU-7I-QO0" id="JIh-6R-Fss"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="持仓" id="ai4-dQ-ma6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0m-AZ-e4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2067" y="237"/>
         </scene>
     </scenes>
 </document>
