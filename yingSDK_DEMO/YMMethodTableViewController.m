@@ -78,6 +78,12 @@
     return cell;
 }
 
+- (IBAction)risk:(id)sender {
+    [YingmiSDK callWithUI:@"riskSurvey" params:nil options:nil completeBlock:^(id err, id data) {
+        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
+        NSLog(@"%@",msg);
+    }];
+}
 
 - (IBAction)allot:(id)sender {
     UITableViewCell * cell = (UITableViewCell *)[[sender superview] superview];

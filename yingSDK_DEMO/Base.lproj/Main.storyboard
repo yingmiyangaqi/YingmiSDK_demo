@@ -271,7 +271,13 @@
                             <outlet property="delegate" destination="96y-i4-Vvu" id="MnP-B6-FsU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="购买" id="uBz-yl-Pmn"/>
+                    <navigationItem key="navigationItem" title="购买" id="uBz-yl-Pmn">
+                        <barButtonItem key="rightBarButtonItem" title="风险评测" id="bN4-RR-hJN">
+                            <connections>
+                                <action selector="risk:" destination="96y-i4-Vvu" id="MH8-Yc-xGW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHj-Uo-3ZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
