@@ -19,6 +19,7 @@
 		0DE9DCBD1C51C0BB00A56683 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DCBB1C51C0BB00A56683 /* HttpClient.m */; };
 		0DE9DCC01C51C3E100A56683 /* YMMethodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DCBF1C51C3E100A56683 /* YMMethodTableViewController.m */; };
 		0DE9DCC31C51D8A100A56683 /* YMHoldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DCC21C51D8A100A56683 /* YMHoldTableViewController.m */; };
+		0DE9DCC61C51D8AE00A56683 /* YMOrdersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DCC51C51D8AE00A56683 /* YMOrdersTableViewController.m */; };
 		0DE9DCCD1C51FD5000A56683 /* util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DCCC1C51FD5000A56683 /* util.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		0DE9DCBF1C51C3E100A56683 /* YMMethodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMMethodTableViewController.m; sourceTree = "<group>"; };
 		0DE9DCC11C51D8A100A56683 /* YMHoldTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHoldTableViewController.h; sourceTree = "<group>"; };
 		0DE9DCC21C51D8A100A56683 /* YMHoldTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMHoldTableViewController.m; sourceTree = "<group>"; };
+		0DE9DCC41C51D8AE00A56683 /* YMOrdersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMOrdersTableViewController.h; sourceTree = "<group>"; };
+		0DE9DCC51C51D8AE00A56683 /* YMOrdersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMOrdersTableViewController.m; sourceTree = "<group>"; };
 		0DE9DCCB1C51FD5000A56683 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		0DE9DCCC1C51FD5000A56683 /* util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +105,8 @@
 				0DE9DCBF1C51C3E100A56683 /* YMMethodTableViewController.m */,
 				0DE9DCC11C51D8A100A56683 /* YMHoldTableViewController.h */,
 				0DE9DCC21C51D8A100A56683 /* YMHoldTableViewController.m */,
+				0DE9DCC41C51D8AE00A56683 /* YMOrdersTableViewController.h */,
+				0DE9DCC51C51D8AE00A56683 /* YMOrdersTableViewController.m */,
 				0DE9DCA11C51B9F200A56683 /* Main.storyboard */,
 				0DE9DCA41C51B9F200A56683 /* Assets.xcassets */,
 				0DE9DCA61C51B9F200A56683 /* LaunchScreen.storyboard */,
@@ -203,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE9DCC01C51C3E100A56683 /* YMMethodTableViewController.m in Sources */,
+				0DE9DCC61C51D8AE00A56683 /* YMOrdersTableViewController.m in Sources */,
 				0DE9DCBD1C51C0BB00A56683 /* HttpClient.m in Sources */,
 				0DE9DCC31C51D8A100A56683 /* YMHoldTableViewController.m in Sources */,
 				0DE9DCB61C51BF7A00A56683 /* YMLoginViewController.m in Sources */,
