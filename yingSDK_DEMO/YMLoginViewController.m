@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txt_accountId;
 @property (weak, nonatomic) IBOutlet UITextField *txt_password;
 @property (weak, nonatomic) IBOutlet UIButton *btnToken;
+@property (weak, nonatomic) IBOutlet UIButton *btnBuy;
 @property (weak, nonatomic) IBOutlet UILabel *lb_token;
 @end
 
@@ -47,11 +48,9 @@
     [self.view endEditing:NO];
 }
 
-
 - (IBAction)login:(id)sender {
     NSString *name = self.txt_accountId.text;
     NSString *password = self.txt_password.text;
-    
     //1.第三方用户登录，获取第三方用户token 注：这地方是个模拟过程
     d = [HttpClient doPost:@"http://172.19.0.244/ymb/v1/user/login" parameters:@{@"name":name,@"password":password}];
     __weak YMLoginViewController *weakSelf = self;
@@ -80,6 +79,7 @@
         if(dict){
             //4.
             access_token = dict[@"accessToken"];
+            weakSelf.btnBuy.enabled = YES;
             self.lb_token.text = access_token;
             
             if(!weakSelf.isInit){
@@ -95,7 +95,6 @@
                 //6.如果重新登录,不必再初始化SDK(初始化也不会有任何影响),只需设置SDK中盈米token
                 [YingmiSDK setToken:access_token];
             }
-            
         }
         
         return resultObject;
