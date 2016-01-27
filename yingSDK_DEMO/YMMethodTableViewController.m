@@ -78,6 +78,8 @@
     return cell;
 }
 
+- (IBAction)risk:(id)sender {
+}
 
 - (IBAction)allot:(id)sender {
     UITableViewCell * cell = (UITableViewCell *)[[sender superview] superview];
@@ -92,13 +94,23 @@
 
 
 - (IBAction)investPlan:(id)sender {
+    UITableViewCell * cell = (UITableViewCell *)[[sender superview] superview];
+    NSIndexPath * path = [self.tableView indexPathForCell:cell];
+    NSInteger row = path.row;
+    
+    [YingmiSDK callWithUI:@"createFundInvestPlan" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
+        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
+        NSLog(@"%@",msg);
+    }];
 }
 
 - (IBAction)rechargeWallet:(id)sender {
+
 }
 
 
 - (IBAction)redeemWallet:(id)sender {
+
 }
 
 @end
