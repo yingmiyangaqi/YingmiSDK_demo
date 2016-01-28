@@ -109,7 +109,7 @@
 }
 
 - (IBAction)rechargeWallet:(id)sender {
-    [YingmiSDK callWithUI:@"rechargeWallet" params:nil options:nil completeBlock:^(id err, id data) {
+    [YingmiSDK callWithUI:@"deposit" params:nil options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -117,7 +117,7 @@
 
 
 - (IBAction)redeemWallet:(id)sender {
-    [YingmiSDK callWithUI:@"redeemWallet" params:nil options:nil completeBlock:^(id err, id data) {
+    [YingmiSDK callWithUI:@"withdraw" params:nil options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];

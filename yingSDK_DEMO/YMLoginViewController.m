@@ -52,7 +52,7 @@
     NSString *name = self.txt_accountId.text;
     NSString *password = self.txt_password.text;
     //1.第三方用户登录，获取第三方用户token 注：这地方是个模拟过程
-    d = [HttpClient doPost:@"http://172.19.0.244/ymb/v1/user/login" parameters:@{@"name":name,@"password":password}];
+    d = [HttpClient doPost:@"http://localhost:8088/ymb/user/login" parameters:@{@"name":name,@"password":password}];
     __weak YMLoginViewController *weakSelf = self;
     [d then:^id(id resultObject) {
         NSDictionary *dict = (NSDictionary*)resultObject;
@@ -71,14 +71,14 @@
 
 - (IBAction)token:(id)sender {
     //3.获取盈米token 注：这地方是个模拟过程
-    d = [HttpClient doGet:@"http://172.19.0.244/ymb/v1/user/token" parameters:@{@"access_token":token}];
+    d = [HttpClient doGet:@"http://localhost:8088/ymb/user/yingmi-token" parameters:@{@"access_token":token}];
     
     __weak YMLoginViewController *weakSelf = self;
     [d then:^id(id resultObject) {
         NSDictionary *dict = (NSDictionary*)resultObject;
         if(dict){
             //4.
-            access_token = dict[@"accessToken"];
+            access_token = dict[@"yingmiToken"];
             weakSelf.btnBuy.enabled = YES;
             self.lb_token.text = access_token;
             
