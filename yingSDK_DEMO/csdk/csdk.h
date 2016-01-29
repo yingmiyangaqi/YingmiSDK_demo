@@ -1,6 +1,6 @@
 //
-//  yingmiLib.h
-//  yingmiLib
+//  csdk.h
+//  csdk
 //
 //  Created by www.yingmi.cn on 15/12/28.
 //  Copyright © 2015年 www.yingmi.cn. All rights reserved.
@@ -18,7 +18,7 @@ typedef void(^completeBlock)(id err,id data);
 
 
 
-@interface YingmiSDK : NSObject
+@interface csdk : NSObject
 
 /**
  *  初始化函数
@@ -65,4 +65,5 @@ typedef void(^completeBlock)(id err,id data);
  *  关闭窗口
  */
 + (void)abort;
+
 @end

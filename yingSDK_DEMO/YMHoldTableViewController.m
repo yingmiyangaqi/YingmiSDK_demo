@@ -7,7 +7,7 @@
 //
 
 #import "YMHoldTableViewController.h"
-#import "YingmiSDK.h"
+#import "csdk.h"
 #import "util.h"
 
 @interface YMHoldTableViewController ()
@@ -24,7 +24,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     __weak YMHoldTableViewController *weakSelf = self;
-    [YingmiSDK callAsyncWithDataType:@"fundShares" params:nil options:nil completeBlock:^(id err, id data) {
+    [csdk callAsyncWithDataType:@"fundShares" params:nil options:nil completeBlock:^(id err, id data) {
         if(!err){
             holdDatas = data;
             [weakSelf.tableView reloadData];
@@ -65,7 +65,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiSDK callWithUI:@"redeemFund" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"redeemFund" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -76,7 +76,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiSDK callWithUI:@"convert" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"convert" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -88,7 +88,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiSDK callWithUI:@"setFundDividendMethod" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"setFundDividendMethod" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];

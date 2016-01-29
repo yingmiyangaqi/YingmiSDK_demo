@@ -7,7 +7,7 @@
 //
 
 #import "YMMethodTableViewController.h"
-#import "YingmiSDK.h"
+#import "csdk.h"
 #import "util.h"
 
 @interface YMMethodTableViewController (){
@@ -79,7 +79,7 @@
 }
 
 - (IBAction)risk:(id)sender {
-    [YingmiSDK callWithUI:@"riskSurvey" params:nil options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"riskSurvey" params:nil options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -90,7 +90,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiSDK callWithUI:@"buyFund" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"buyFund" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -102,14 +102,14 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiSDK callWithUI:@"createFundInvestPlan" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"createFundInvestPlan" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
 }
 
 - (IBAction)rechargeWallet:(id)sender {
-    [YingmiSDK callWithUI:@"deposit" params:nil options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"deposit" params:nil options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -117,7 +117,7 @@
 
 
 - (IBAction)redeemWallet:(id)sender {
-    [YingmiSDK callWithUI:@"withdraw" params:nil options:nil completeBlock:^(id err, id data) {
+    [csdk callWithUI:@"withdraw" params:nil options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];

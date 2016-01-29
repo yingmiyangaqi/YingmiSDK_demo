@@ -7,7 +7,7 @@
 //
 
 #import "YMLoginViewController.h"
-#import "YingmiSDK.h"
+#import "csdk.h"
 #import "HttpClient.h"
 
 @interface YMLoginViewController ()
@@ -84,7 +84,7 @@
             
             if(!weakSelf.isInit){
                 //5.获取盈米token后，初始化SDK,初始化只需要一次
-                [YingmiSDK initSDKWithConfig:@{@"brokerId":@"123456",@"token":access_token} completeBlock:^(id err, id data) {
+                [csdk initSDKWithConfig:@{@"brokerId":@"123456",@"token":access_token} completeBlock:^(id err, id data) {
                     if(err){
                         weakSelf.isInit = NO;
                     }else{
@@ -93,7 +93,7 @@
                 }];
             }else{
                 //6.如果重新登录,不必再初始化SDK(初始化也不会有任何影响),只需设置SDK中盈米token
-                [YingmiSDK setToken:access_token];
+                [csdk setToken:access_token];
             }
         }
         
