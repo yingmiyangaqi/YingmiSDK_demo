@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D049CB61C59F15A0030B04F /* yingmiSDK_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D049CB51C59F15A0030B04F /* yingmiSDK_test.a */; };
+		0D04D7CF1C5B3ACC00B26750 /* yingmiSDK_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D04D7CE1C5B3ACC00B26750 /* yingmiSDK_test.a */; };
 		0DE9DC9A1C51B9F200A56683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC991C51B9F200A56683 /* main.m */; };
 		0DE9DC9D1C51B9F200A56683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC9C1C51B9F200A56683 /* AppDelegate.m */; };
 		0DE9DCA01C51B9F200A56683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC9F1C51B9F200A56683 /* ViewController.m */; };
@@ -24,8 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D049CB41C59F15A0030B04F /* YingmiSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingmiSDK.h; sourceTree = "<group>"; };
-		0D049CB51C59F15A0030B04F /* yingmiSDK_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = yingmiSDK_test.a; sourceTree = "<group>"; };
+		0D04D7CD1C5B3ACC00B26750 /* YingmiSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingmiSDK.h; sourceTree = "<group>"; };
+		0D04D7CE1C5B3ACC00B26750 /* yingmiSDK_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = yingmiSDK_test.a; sourceTree = "<group>"; };
 		0DE9DC951C51B9F200A56683 /* yingSDK_DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yingSDK_DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9DC991C51B9F200A56683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE9DC9B1C51B9F200A56683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,18 +57,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D049CB61C59F15A0030B04F /* yingmiSDK_test.a in Frameworks */,
+				0D04D7CF1C5B3ACC00B26750 /* yingmiSDK_test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D049CB31C59F15A0030B04F /* yingmiSDK */ = {
+		0D04D7CC1C5B3ACC00B26750 /* yingmiSDK */ = {
 			isa = PBXGroup;
 			children = (
-				0D049CB41C59F15A0030B04F /* YingmiSDK.h */,
-				0D049CB51C59F15A0030B04F /* yingmiSDK_test.a */,
+				0D04D7CD1C5B3ACC00B26750 /* YingmiSDK.h */,
+				0D04D7CE1C5B3ACC00B26750 /* yingmiSDK_test.a */,
 			);
 			path = yingmiSDK;
 			sourceTree = "<group>";
@@ -119,7 +119,7 @@
 		0DE9DC981C51B9F200A56683 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0D049CB31C59F15A0030B04F /* yingmiSDK */,
+				0D04D7CC1C5B3ACC00B26750 /* yingmiSDK */,
 				0DE9DC991C51B9F200A56683 /* main.m */,
 			);
 			name = "Supporting Files";
