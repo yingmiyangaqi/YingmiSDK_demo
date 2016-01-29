@@ -18,7 +18,7 @@ typedef void(^completeBlock)(id err,id data);
 
 
 
-@interface csdk : NSObject
+@interface YingmiCsdk : NSObject
 
 /**
  *  初始化函数

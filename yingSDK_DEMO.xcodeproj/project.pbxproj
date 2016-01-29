@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DA472831C5B62A50019CFA5 /* csdk_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA472821C5B62A50019CFA5 /* csdk_test.a */; };
+		0DA472871C5B68910019CFA5 /* libYingmiCsdk_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA472851C5B68910019CFA5 /* libYingmiCsdk_test.a */; };
 		0DE9DC9A1C51B9F200A56683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC991C51B9F200A56683 /* main.m */; };
 		0DE9DC9D1C51B9F200A56683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC9C1C51B9F200A56683 /* AppDelegate.m */; };
 		0DE9DCA01C51B9F200A56683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC9F1C51B9F200A56683 /* ViewController.m */; };
@@ -24,8 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0DA472811C5B62A50019CFA5 /* csdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = csdk.h; sourceTree = "<group>"; };
-		0DA472821C5B62A50019CFA5 /* csdk_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = csdk_test.a; sourceTree = "<group>"; };
+		0DA472851C5B68910019CFA5 /* libYingmiCsdk_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYingmiCsdk_test.a; sourceTree = "<group>"; };
+		0DA472861C5B68910019CFA5 /* YingmiCsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingmiCsdk.h; sourceTree = "<group>"; };
 		0DE9DC951C51B9F200A56683 /* yingSDK_DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yingSDK_DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9DC991C51B9F200A56683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE9DC9B1C51B9F200A56683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,20 +57,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA472831C5B62A50019CFA5 /* csdk_test.a in Frameworks */,
+				0DA472871C5B68910019CFA5 /* libYingmiCsdk_test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DA472801C5B62A50019CFA5 /* csdk */ = {
+		0DA472841C5B68910019CFA5 /* yingmiCsdk */ = {
 			isa = PBXGroup;
 			children = (
-				0DA472811C5B62A50019CFA5 /* csdk.h */,
-				0DA472821C5B62A50019CFA5 /* csdk_test.a */,
+				0DA472851C5B68910019CFA5 /* libYingmiCsdk_test.a */,
+				0DA472861C5B68910019CFA5 /* YingmiCsdk.h */,
 			);
-			path = csdk;
+			path = yingmiCsdk;
 			sourceTree = "<group>";
 		};
 		0DE9DC8C1C51B9F200A56683 = {
@@ -119,7 +119,7 @@
 		0DE9DC981C51B9F200A56683 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0DA472801C5B62A50019CFA5 /* csdk */,
+				0DA472841C5B68910019CFA5 /* yingmiCsdk */,
 				0DE9DC991C51B9F200A56683 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -336,6 +336,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/yingSDK_DEMO/yingmiSDK",
 					"$(PROJECT_DIR)/yingSDK_DEMO/csdk",
+					"$(PROJECT_DIR)/yingSDK_DEMO/yingmiCsdk",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.yingmi.yingmiDemo.yingSDK-DEMO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +358,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/yingSDK_DEMO/yingmiSDK",
 					"$(PROJECT_DIR)/yingSDK_DEMO/csdk",
+					"$(PROJECT_DIR)/yingSDK_DEMO/yingmiCsdk",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.yingmi.yingmiDemo.yingSDK-DEMO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
