@@ -1,6 +1,6 @@
 //
-//  csdk.h
-//  csdk
+//  YingmiCsdk.h
+//  YingmiCsdk
 //
 //  Created by www.yingmi.cn on 15/12/28.
 //  Copyright © 2015年 www.yingmi.cn. All rights reserved.
@@ -56,8 +56,9 @@ typedef void(^completeBlock)(id err,id data);
  *  @param options 其他参数，如http的method
  *  @param complete 调用结果
  *
+ *  @return 成功返回请求的标识，否则返回nil，用于后续取消请求
  */
-+ (void)callAsyncWithDataType:(NSString*)dataType params:(NSDictionary*)params options:(NSDictionary*)options completeBlock:(completeBlock)complete;
++ (NSString*)callAsyncWithDataType:(NSString*)dataType params:(NSDictionary*)params options:(NSDictionary*)options completeBlock:(completeBlock)complete;
 
 
 
@@ -66,4 +67,10 @@ typedef void(^completeBlock)(id err,id data);
  */
 + (void)abort;
 
+/**
+ *  取消请求
+ *
+ *  @param requestTag 一条请求的标识, callAsyncWithDataType函数返回
+ */
++ (void)abortCall:(NSString*)callTag;
 @end

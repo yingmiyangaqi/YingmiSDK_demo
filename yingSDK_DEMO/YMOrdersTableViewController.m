@@ -38,6 +38,7 @@
             dispatch_group_leave(group);
         }];
         
+        
         dispatch_group_enter(group);
         
         [YingmiCsdk callAsyncWithDataType:@"listFundInvestPlan" params:nil options:nil completeBlock:^(id err, id data) {
@@ -46,11 +47,15 @@
                 dispatch_group_leave(group);
             }
         }];
+
         
-        dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.tableView reloadData];
-        });
+        dispatch_group_wait(group, dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC*60));//最长等待1分钟
+        if(orderDatas || investPlanDatas){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView reloadData];
+            });
+        }
+        
         
     });
     

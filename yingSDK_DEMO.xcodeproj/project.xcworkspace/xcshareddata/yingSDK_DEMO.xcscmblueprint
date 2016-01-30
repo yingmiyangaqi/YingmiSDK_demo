@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FCAF37C678F994FD7C07E7265069B9B144C2A651",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CCC4DEBD6E94230A4DDA91D99E44D96EC6AABC58" : 0,
+    "FCAF37C678F994FD7C07E7265069B9B144C2A651" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "888851F4-6E43-47F7-9B8C-9B1F4F77143D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CCC4DEBD6E94230A4DDA91D99E44D96EC6AABC58" : "ios\/",
+    "FCAF37C678F994FD7C07E7265069B9B144C2A651" : "sample-app-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "yingSDK_DEMO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "yingSDK_DEMO.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.frontnode.net:sdk\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CCC4DEBD6E94230A4DDA91D99E44D96EC6AABC58"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.frontnode.net:sdk\/sample-app-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FCAF37C678F994FD7C07E7265069B9B144C2A651"
+    }
+  ]
+}
