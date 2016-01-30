@@ -70,7 +70,7 @@ typedef void(^completeBlock)(id err,id data);
 /**
  *  取消请求
  *
- *  @param requestTag 一条请求的标识, callAsyncWithDataType函数返回
+ *  @param callTag 一条请求的标识, callAsyncWithDataType函数返回
  */
 + (void)abortCall:(NSString*)callTag;
 @end
