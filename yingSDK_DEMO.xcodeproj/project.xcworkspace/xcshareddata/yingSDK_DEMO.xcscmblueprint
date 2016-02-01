@@ -1,21 +1,28 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FCAF37C678F994FD7C07E7265069B9B144C2A651",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1E252F02C30BAAB792D3F78B4E6C10349942E656",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FCAF37C678F994FD7C07E7265069B9B144C2A651" : 0,
     "CCC4DEBD6E94230A4DDA91D99E44D96EC6AABC58" : 0,
-    "FCAF37C678F994FD7C07E7265069B9B144C2A651" : 0
+    "1E252F02C30BAAB792D3F78B4E6C10349942E656" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "888851F4-6E43-47F7-9B8C-9B1F4F77143D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FCAF37C678F994FD7C07E7265069B9B144C2A651" : "sample-app-ios\/",
     "CCC4DEBD6E94230A4DDA91D99E44D96EC6AABC58" : "ios\/",
-    "FCAF37C678F994FD7C07E7265069B9B144C2A651" : "sample-app-ios\/"
+    "1E252F02C30BAAB792D3F78B4E6C10349942E656" : "YingmiSDK_demo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "yingSDK_DEMO",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "yingSDK_DEMO.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yingmiyangaqi\/YingmiSDK_demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1E252F02C30BAAB792D3F78B4E6C10349942E656"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.frontnode.net:sdk\/ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
