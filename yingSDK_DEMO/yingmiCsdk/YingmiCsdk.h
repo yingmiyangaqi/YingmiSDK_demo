@@ -44,8 +44,9 @@ typedef void(^completeBlock)(id err,id data);
  *  @param options 其他参数，如http的method
  *  @param complete 调用结果
  *
+ *  @return 成功返回请求的标识，否则返回nil，用于后续取消请求
  */
-+ (void)callWithUI:(NSString*)command params:(NSDictionary*)params options:(NSDictionary*)options completeBlock:(completeBlock)complete;
++ (NSString*)callWithUI:(NSString*)command params:(NSDictionary*)params options:(NSDictionary*)options completeBlock:(completeBlock)complete;
 
 
 /**
@@ -61,16 +62,10 @@ typedef void(^completeBlock)(id err,id data);
 + (NSString*)callAsyncWithDataType:(NSString*)dataType params:(NSDictionary*)params options:(NSDictionary*)options completeBlock:(completeBlock)complete;
 
 
-
-/**
- *  关闭窗口
- */
-+ (void)abort;
-
 /**
  *  取消请求
  *
- *  @param callTag 一条请求的标识, callAsyncWithDataType函数返回
+ *  @param callTag 一条请求的标识
  */
 + (void)abortCall:(NSString*)callTag;
 @end
