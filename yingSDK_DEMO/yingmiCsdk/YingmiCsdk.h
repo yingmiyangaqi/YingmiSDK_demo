@@ -37,7 +37,7 @@ typedef void(^completeBlock)(id err,id data);
 + (void)setToken:(NSString*)token;
 
 /**
- *  根据command构造url，弹出相关webview
+ *  根据command构造url，弹出相关页面
  *
  *  @param command    接口
  *  @param params  接口参数

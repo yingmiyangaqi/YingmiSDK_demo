@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DE42E231C5F1671007B7904 /* libYingmiCsdk_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE42E211C5F1671007B7904 /* libYingmiCsdk_test.a */; };
+		0DDDBA0D1C60BEEB000EE5FA /* libYingmiCsdk_test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDDBA0B1C60BEEB000EE5FA /* libYingmiCsdk_test.a */; };
 		0DE9DC9A1C51B9F200A56683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC991C51B9F200A56683 /* main.m */; };
 		0DE9DC9D1C51B9F200A56683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC9C1C51B9F200A56683 /* AppDelegate.m */; };
 		0DE9DCA01C51B9F200A56683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE9DC9F1C51B9F200A56683 /* ViewController.m */; };
@@ -24,8 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0DE42E211C5F1671007B7904 /* libYingmiCsdk_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYingmiCsdk_test.a; sourceTree = "<group>"; };
-		0DE42E221C5F1671007B7904 /* YingmiCsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingmiCsdk.h; sourceTree = "<group>"; };
+		0DDDBA0B1C60BEEB000EE5FA /* libYingmiCsdk_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYingmiCsdk_test.a; sourceTree = "<group>"; };
+		0DDDBA0C1C60BEEB000EE5FA /* YingmiCsdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YingmiCsdk.h; sourceTree = "<group>"; };
 		0DE9DC951C51B9F200A56683 /* yingSDK_DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yingSDK_DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE9DC991C51B9F200A56683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DE9DC9B1C51B9F200A56683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,18 +57,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE42E231C5F1671007B7904 /* libYingmiCsdk_test.a in Frameworks */,
+				0DDDBA0D1C60BEEB000EE5FA /* libYingmiCsdk_test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DE42E201C5F1671007B7904 /* yingmiCsdk */ = {
+		0DDDBA0A1C60BEEB000EE5FA /* yingmiCsdk */ = {
 			isa = PBXGroup;
 			children = (
-				0DE42E211C5F1671007B7904 /* libYingmiCsdk_test.a */,
-				0DE42E221C5F1671007B7904 /* YingmiCsdk.h */,
+				0DDDBA0B1C60BEEB000EE5FA /* libYingmiCsdk_test.a */,
+				0DDDBA0C1C60BEEB000EE5FA /* YingmiCsdk.h */,
 			);
 			path = yingmiCsdk;
 			sourceTree = "<group>";
@@ -119,7 +119,7 @@
 		0DE9DC981C51B9F200A56683 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0DE42E201C5F1671007B7904 /* yingmiCsdk */,
+				0DDDBA0A1C60BEEB000EE5FA /* yingmiCsdk */,
 				0DE9DC991C51B9F200A56683 /* main.m */,
 			);
 			name = "Supporting Files";

@@ -23,6 +23,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     __weak YMHoldTableViewController *weakSelf = self;
     [YingmiCsdk callAsyncWithDataType:@"fundShares" params:nil options:nil completeBlock:^(id err, id data) {
         if(!err){
