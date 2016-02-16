@@ -107,9 +107,9 @@
         
     }else if(indexPath.section == 1){
         UILabel *name = (UILabel*)[cell viewWithTag:43];
-        name.text = investPlanDatas[indexPath.row][@"strategyParams"][@"fundName"];
+        name.text = investPlanDatas[indexPath.row][@"fundName"];
         UILabel *fundCode = (UILabel*)[cell viewWithTag:44];
-        fundCode.text = investPlanDatas[indexPath.row][@"strategyParams"][@"fundCode"];
+        fundCode.text = investPlanDatas[indexPath.row][@"fundCode"];
         
         UIButton *updateBtn = (UIButton*)[cell viewWithTag:45];
         UIButton *resumeBtn = (UIButton*)[cell viewWithTag:46];
@@ -165,7 +165,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"cancelFundOrder" params:@{@"orderId":orderDatas[row][@"fundOrderId"]} options:nil completeBlock:^(id err, id data) {
+    [YingmiCsdk callWithUI:@"cancelFundOrder" params:@{@"orderId":orderDatas[row][@"orderId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -176,7 +176,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"updateFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"planId"]} options:nil completeBlock:^(id err, id data) {
+    [YingmiCsdk callWithUI:@"updateFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"investPlanId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -188,7 +188,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"resumeFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"planId"]} options:nil completeBlock:^(id err, id data) {
+    [YingmiCsdk callWithUI:@"resumeFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"investPlanId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -199,7 +199,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"pauseFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"planId"]} options:nil completeBlock:^(id err, id data) {
+    [YingmiCsdk callWithUI:@"pauseFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"investPlanId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
@@ -210,7 +210,7 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"terminateFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"planId"]} options:nil completeBlock:^(id err, id data) {
+    [YingmiCsdk callWithUI:@"terminateFundInvestPlan" params:@{@"investPlanId":investPlanDatas[row][@"investPlanId"]} options:nil completeBlock:^(id err, id data) {
         NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
         NSLog(@"%@",msg);
     }];
