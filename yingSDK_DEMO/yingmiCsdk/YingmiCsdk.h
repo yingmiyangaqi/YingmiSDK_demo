@@ -41,7 +41,7 @@ typedef void(^completeBlock)(id err,id data);
  *
  *  @param command    接口
  *  @param params  接口参数
- *  @param options 其他参数，如http的method
+ *  @param options 其他参数，如http的method UI配色color
  *  @param complete 调用结果
  *
  */
