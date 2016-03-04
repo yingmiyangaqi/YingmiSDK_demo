@@ -66,10 +66,11 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"redeemFund" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"redeemFund" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 - (IBAction)convert:(id)sender{
@@ -77,10 +78,11 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"convert" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"convert" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 
@@ -89,10 +91,11 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"setFundDividendMethod" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"setFundDividendMethod" params:@{@"shareId":holdDatas[row][@"shareId"]} options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 @end

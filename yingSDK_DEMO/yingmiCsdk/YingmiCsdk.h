@@ -15,7 +15,7 @@
  *  @param data 成功返回的数据(如果有)
  */
 typedef void(^completeBlock)(id err,id data);
-
+typedef void(^UIBlock)(id data);
 
 
 @interface YingmiCsdk : NSObject
@@ -42,10 +42,12 @@ typedef void(^completeBlock)(id err,id data);
  *  @param command    接口
  *  @param params  接口参数
  *  @param options 其他参数，如http的method UI配色color
- *  @param complete 调用结果
+ *  @param completes 回调字典 具体请看文档。 如：@{@"error":^(id err){...},
+ *                                            @"success":^(id data){...}
+ *                                            }
  *
  */
-+ (void)callWithUI:(NSString*)command params:(NSDictionary*)params options:(NSDictionary*)options completeBlock:(completeBlock)complete;
++ (void)callWithUI:(NSString*)command params:(NSDictionary*)params options:(NSDictionary*)options completes:(NSDictionary*)completes;
 
 
 /**

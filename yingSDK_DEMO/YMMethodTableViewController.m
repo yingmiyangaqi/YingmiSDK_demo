@@ -79,10 +79,11 @@
 }
 
 - (IBAction)risk:(id)sender {
-    [YingmiCsdk callWithUI:@"riskSurvey" params:nil options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"riskSurvey" params:nil options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 - (IBAction)allot:(id)sender {
@@ -90,10 +91,11 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"buyFund" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"buyFund" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
     
 }
 
@@ -103,25 +105,28 @@
     NSIndexPath * path = [self.tableView indexPathForCell:cell];
     NSInteger row = path.row;
     
-    [YingmiCsdk callWithUI:@"createFundInvestPlan" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"createFundInvestPlan" params:@{@"fundCode":datas[row][@"fundCode"]} options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 - (IBAction)rechargeWallet:(id)sender {
-    [YingmiCsdk callWithUI:@"deposit" params:nil options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"deposit" params:nil options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 
 - (IBAction)redeemWallet:(id)sender {
-    [YingmiCsdk callWithUI:@"withdraw" params:nil options:nil completeBlock:^(id err, id data) {
-        NSString *msg = err ? [util DataTOjsonString:err] : [util DataTOjsonString:data];
-        NSLog(@"%@",msg);
-    }];
+    [YingmiCsdk callWithUI:@"withdraw" params:nil options:nil completes:@{@"error":^(id err){
+        NSLog(@"%@",[util DataTOjsonString:err]);
+    },@"success":^(id data){
+        NSLog(@"%@",[util DataTOjsonString:data]);
+    }}];
 }
 
 @end
